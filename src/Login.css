@@ -1,0 +1,41 @@
+form {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #252222;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-box {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 2rem;
+    font-size: 1rem;
+    text-indent: 7px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    outline-color: rgb(255, 255, 255);
+}
+
+.google-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.log-title {
+    text-align: center;
+}
+
+.email-container {
+}
+
+.password-container {
+}
