@@ -1,35 +1,22 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDutQPLQHMtyWZmHSU0ZQ7Mq2xMlQ-O98s",
-  authDomain: "trckr-66ba6.firebaseapp.com",
-  projectId: "trckr-66ba6",
-  storageBucket: "trckr-66ba6.appspot.com",
-  messagingSenderId: "214520373885",
-  appId: "1:214520373885:web:9feef639fd22bc0b258714"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const auth = getAuth(app);
 
-// Get a list of cities from your database
-async function getCities(db) {
-  const citiesCol = collection(db, 'cities');
-  const citySnapshot = await getDocs(citiesCol);
-  const cityList = citySnapshot.docs.map(doc => doc.data());
-  return cityList;
-}
+export {auth}
 
-export { db, getCities };
-
-
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-
-// TODO: Replace the following with your app's Firebase project configuration
 
 

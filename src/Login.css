@@ -28,14 +28,18 @@ form {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 .log-title {
     text-align: center;
 }
 
-.email-container {
-}
-
-.password-container {
+.goog-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    cursor: pointer;
 }
